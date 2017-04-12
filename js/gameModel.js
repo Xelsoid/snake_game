@@ -137,7 +137,7 @@ class GameModel {
 				this.gameScore++;
 				this.myView.updateScore(this.gameScore);
 				this.soundEff('eatApple');
-				// this.vibroEff(1);
+				this.vibroEff(1);
 			}
 		}
 		if (this.snakeGrown == 0) //Если змея растет, то хвост не отрезаем.
@@ -270,7 +270,7 @@ class GameModel {
 	}
 
 	gameOver() {
-		// this.vibroEff(2);
+		this.vibroEff(2);
 		console.log('gameover');
 		clearInterval(this.timer);
 		this.soundEff('gameBGstop');
@@ -306,16 +306,16 @@ class GameModel {
 		
 	}
 //поддержка вибро на моб устройствах
-	// vibroEff(flag) { // есть поддержка Vibration API?
-	// 	switch ( flag ){
-	// 		case 1:
-	// 		    window.navigator.vibrate(300);
-	// 		    break;
-	// 		case 2:
-	// 		    window.navigator.vibrate(1000);
-	// 		    break;
-	// 	}
-	// }
+	vibroEff(flag) { 
+		switch ( flag ){
+			case 1:
+			    window.navigator.vibrate(300);
+			    break;
+			case 2:
+			    window.navigator.vibrate(1000);
+			    break;
+		}
+	}
 
 	randomDiap(N, M) {
 		return Math.floor(Math.random() * (M - N + 1)) + N;
