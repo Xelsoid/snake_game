@@ -11,24 +11,24 @@ class GameController {
 		this.myModel.snakeStart();
 		document.addEventListener("keydown", this.keyDown.bind(this), false);
 //поддержка жестов для управлении на мобильных устройствах
-		let SwipeControll = new Hammer(document);
-		SwipeControll.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-		SwipeControll.on("swipeleft", function (EO) {
-			EO.preventDefault();
-			this.snakeShift(37);
-		});
-		SwipeControll.on("swiperight", function (EO) {
-			EO.preventDefault();
-			this.snakeShift(39);
-		});
-		SwipeControll.on("swipeup", function (EO) {
-			EO.preventDefault();
-			this.snakeShift(38);
-		});
-		SwipeControll.on("swipedown", function (EO) {
-			EO.preventDefault();
-			this.snakeShift(40);
-		});
+		// let SwipeControll = new Hammer(document);
+		// SwipeControll.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+		// SwipeControll.on("swipeleft", function (EO) {
+		// 	EO.preventDefault();
+		// 	snakeShift(37);
+		// });
+		// SwipeControll.on("swiperight", function (EO) {
+		// 	EO.preventDefault();
+		// 	snakeShift(39);
+		// });
+		// SwipeControll.on("swipeup", function (EO) {
+		// 	EO.preventDefault();
+		// 	snakeShift(38);
+		// });
+		// SwipeControll.on("swipedown", function (EO) {
+		// 	EO.preventDefault();
+		// 	snakeShift(40);
+		// });
 	}
 
 	keyDown(EO) {
