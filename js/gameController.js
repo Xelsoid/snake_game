@@ -15,19 +15,19 @@ class GameController {
 		SwipeControll.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 		SwipeControll.on("swipeleft", function (EO) {
 			EO.preventDefault();
-			snakeShift(37);
+			this.snakeShift(37);
 		});
 		SwipeControll.on("swiperight", function (EO) {
 			EO.preventDefault();
-			snakeShift(39);
+			this.snakeShift(39);
 		});
 		SwipeControll.on("swipeup", function (EO) {
 			EO.preventDefault();
-			snakeShift(38);
+			this.snakeShift(38);
 		});
 		SwipeControll.on("swipedown", function (EO) {
 			EO.preventDefault();
-			snakeShift(40);
+			this.snakeShift(40);
 		});
 	}
 
